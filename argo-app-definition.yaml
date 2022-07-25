@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wordpress-demo
+spec:
+  destination:
+    name: ''
+    namespace: wordpress
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: wordpress
+    repoURL: 'https://github.com/YourUsername/argocd-astra-demo'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
