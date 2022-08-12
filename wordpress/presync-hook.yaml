@@ -20,10 +20,11 @@ spec:
         - -c
         - >
           APPNAME=wordpress &&
+          NAMESPACE=wordpress &&
           apk add py3-pip jq &&
           python3 -m pip install --upgrade pip &&
           python3 -m pip install actoolkit &&
-          for i in `actoolkit -o json list apps -s namespace -n $APPNAME | jq -r '.items[].id'`;
+          for i in `actoolkit -o json list apps -n $NAMESPACE | jq -r '.items[].id'`;
           do
             echo actoolkit: snapshotting app $APPNAME / $i;
             actoolkit create snapshot $i argo-presync-`date "+%Y%m%d%H%M%S"`;
