@@ -24,7 +24,7 @@ spec:
           apk add py3-pip jq &&
           python3 -m pip install --upgrade pip &&
           python3 -m pip install actoolkit &&
-          for i in `actoolkit -o json list namespaces -m 30 -f $NAMESPACE | jq -r '.items[].clusterID'`;
+          for i in `actoolkit -o json list namespaces -m 120 -f $NAMESPACE | jq -r '.items[].clusterID'`;
           do
             echo actoolkit: managing app $APPNAME in namespace $NAMESPACE on cluster $i;
             actoolkit manage app $APPNAME $NAMESPACE $i;
