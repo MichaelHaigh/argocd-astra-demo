@@ -31,6 +31,7 @@ spec:
             sleep 5;
           done &&
           for j in `actoolkit -o json list apps -n $NAMESPACE | jq -r '.items[].id'`;
+          do
             echo actoolkit: creating protection policy for $APPNAME / $j;
             actoolkit create protectionpolicy $j -g hourly  -m 0      -b 1 -s 1;
             actoolkit create protectionpolicy $j -g daily   -H 0      -b 2 -s 2;
