@@ -10,7 +10,7 @@ spec:
   source:
     path: wordpress
     repoURL: 'https://github.com/YourUsername/argocd-astra-demo'
-    targetRevision: HEAD
+    targetRevision: hackathon
   project: default
   syncPolicy:
     automated:

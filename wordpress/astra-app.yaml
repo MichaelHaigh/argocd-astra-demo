@@ -1,0 +1,12 @@
+apiVersion: astra.netapp.io/v1
+kind: AstraApplication
+metadata:
+  name: wordpress
+spec:
+  type: application/astra-app
+  version: "2.1"
+  name: wordpress
+  namespaceScopedResources:
+    - namespace: wordpress
+      labelSelectors:
+        - astra=data-only
