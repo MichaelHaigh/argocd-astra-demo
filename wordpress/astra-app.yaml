@@ -1,11 +1,11 @@
 apiVersion: astra.netapp.io/v1
 kind: AstraApplication
 metadata:
-  name: wordpress
+  name: wordpress-argocd
 spec:
   type: application/astra-app
   version: "2.1"
-  name: wordpress
+  name: wordpress-argocd
   namespaceScopedResources:
     - namespace: wordpress
       labelSelectors:
