@@ -17,6 +17,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: wp-pv-claim
   labels:
+    astra: data-only
     app: wordpress
 spec:
   accessModes:
