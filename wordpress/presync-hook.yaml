@@ -14,7 +14,7 @@ spec:
             secretName: astra-control-config
       containers:
       - name: alpine-actoolkit
-        image: docker.repo.eng.netapp.com/mhaigh/alpine:latest
+        image: docker.repo.eng.netapp.com/mhaigh/amd64/alpine:latest
         command: ["/bin/sh"]
         args:
         - -c
