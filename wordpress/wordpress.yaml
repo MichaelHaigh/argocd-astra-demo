@@ -18,6 +18,7 @@ metadata:
   name: wp-pv-claim
   labels:
     app: wordpress
+    type: volume
 spec:
   accessModes:
     - ReadWriteMany
